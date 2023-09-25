@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+
+  vars:
+    new_user: NewUserTest 
+
+  tasks:
+
+  - name: user
+    user:
+      name: "{{ new_user }}"
+      state: present
+    
+
+
+
